@@ -3,9 +3,21 @@ package com.hms.controller;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.support.SimpleTriggerContext;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
+@RestController
 public class HmsApplication {
+
+	@RequestMapping(value  = "to", method = RequestMethod.GET)
+
+	public String helloWorld(){
+		return "Welcome to your first Spring Boot Application";
+	}
+
 
 	public static void main(String[] args) {
 
