@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     private LabTestService userService;
 
-    @GetMapping
+    @GetMapping ("/users")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }

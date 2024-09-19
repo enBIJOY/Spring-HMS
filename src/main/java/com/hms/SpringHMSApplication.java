@@ -29,7 +29,7 @@ public class SpringHMSApplication {
 //            System.out.println("JDBC Driver loaded successfully");
 //        } catch (Exception ex) {
 //            // handle the error
-//            System.out.println("Problem with JDBC Driver"+ex.toString());
+//            System.out.println("Problem with JDBC D0river"+ex.toString());
 //            //JOptionPane.showMessageDialog(null,JOptionPane.ERROR_MESSAGE+"Problem with JDBC Driver");
 //        }
     }
