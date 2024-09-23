@@ -37,10 +37,35 @@ public class UserServiceImpl implements UserService {
     public User updateUser(int userId, User user) {
         User userDB = userRepo.findById(userId).get();
 
-        if (Objects.nonNull(user.getUsername()) &&
-                !"".equalsIgnoreCase(user.getUsername())) {
-            userDB.setUsername(user.getUsername());
+//        if (Objects.nonNull(user.getUsername()) &&
+//                !"".equalsIgnoreCase(user.getUsername())) {
+//            userDB.setUsername(user.getUsername());
+//        }
+
+        if (Objects.nonNull(user.getPassword()) &&
+                !"".equalsIgnoreCase(user.getPassword())) {
+            userDB.setPassword(user.getPassword());
         }
+//        if (Objects.nonNull(user.getFullName()) &&
+//                !"".equalsIgnoreCase(user.getFullName())) {
+//            userDB.setFullName(user.getFullName());
+//        }
+        if (Objects.nonNull(user.getPhone()) &&
+                !"".equalsIgnoreCase(user.getPhone())) {
+            userDB.setPhone(user.getPhone());
+        }
+        if (Objects.nonNull(user.getAge()) &&
+                user.getAge() > 0) {
+            userDB.setAge(user.getAge());
+        }
+        if (Objects.nonNull(user.getAddress()) &&
+                !"".equalsIgnoreCase(user.getAddress())) {
+            userDB.setAddress(user.getAddress());
+        }
+//        if (Objects.nonNull(user.getUserType()) &&
+//                !"".equalsIgnoreCase(user.getUserType())) {
+//            userDB.setUserType(user.getUserType());
+//        }
         return userRepo.save(userDB);
     }
 }
