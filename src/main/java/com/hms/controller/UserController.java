@@ -1,7 +1,7 @@
 package com.hms.controller;
 
 import com.hms.model.User;
-import com.hms.service.LabTestService;
+import com.hms.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +10,7 @@ import java.util.List;
 @RequestMapping
 public class UserController {
     @Autowired
-    private LabTestService userService;
+    private UserService userService;
 
     @GetMapping ("/users")
     public List<User> getAllUsers() {
@@ -20,5 +20,16 @@ public class UserController {
     @PostMapping ("/users")
     public User createUser(@RequestBody User user) {
         return userService.saveUser(user);
+    }
+
+        @GetMapping("/users/{id}")
+        public User fetchUserById(@PathVariable("id") int userId){
+            return userService.fetchUserById(userId);
+    }
+
+    @DeleteMapping("/users/{id}")
+    public String deleteUserById(@PathVariable("id") int UserId){
+        userService.deleteUserById(UserId);
+        return "User Deleted Successfully!!";
     }
 }

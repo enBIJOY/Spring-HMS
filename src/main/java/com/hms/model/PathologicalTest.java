@@ -1,37 +1,39 @@
-package com.hms.model;
-
-public class PathologicalTest extends LabTest{
-
-    //    private String title;
-//    private double cost;
-//    private boolean isAvailable;
-    private String reagent;
-
-    public PathologicalTest(){}
-    public PathologicalTest(String title, double cost){
-        this.title = title;
-        this.cost = cost;
-    }
-    public PathologicalTest(String title, int cost){
-        this.title = title;
-        this.cost = cost;
-    }
-    public PathologicalTest(double cost, String name){
-        this.title = name;
-        this.cost = cost;
-    }
-    public PathologicalTest(String title,
-                            double cost,
-                            boolean isAvailable,
-                            String reagent){
-        super(title,cost,isAvailable);
-        this.reagent = reagent;
-    }
-
-    @Override
-    public String toString(){
-        String output = super.toString()+"\n"
-                + "Reagent: "+this.reagent+"\n";
-        return output;
-    }
-}
+//package com.hms.model;
+//
+//
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.GeneratedValue;
+//import jakarta.persistence.GenerationType;
+//import jakarta.persistence.Id;
+//import lombok.AllArgsConstructor;
+//import lombok.Getter;
+//import lombok.NoArgsConstructor;
+//
+//@Getter
+//@Entity
+//
+//@NoArgsConstructor
+//@AllArgsConstructor
+//public class PathologicalTest extends LabTest{
+//
+//    //    private String title;
+////    private double cost;
+////    private boolean isAvailable;
+//
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private long Id;
+//
+//    public PathologicalTest(String title,
+//                            double cost,
+//                            boolean isAvailable,
+//                            String reagent){
+//        super(title,cost,isAvailable);
+//    }
+//
+//    @Override
+//    public String toString(){
+//        String output = super.toString()+"\n";
+//        return output;
+//    }
+//}

@@ -11,6 +11,7 @@ public class LabTest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
+
     protected String title;
     protected double cost;
     protected boolean isAvailable;
