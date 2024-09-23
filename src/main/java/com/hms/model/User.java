@@ -13,8 +13,8 @@ import lombok.Setter;
 
 
 @Getter
+@Setter
 @Entity
-
 @NoArgsConstructor
 @AllArgsConstructor
 
@@ -23,6 +23,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int mid;
     @Getter
+    @Setter
     private String username;
     @Setter
     private String password;
