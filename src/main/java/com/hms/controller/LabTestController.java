@@ -1,4 +1,4 @@
-//package com.hms.controller;
+package com.hms.controller;
 //
 //import com.hms.model.User;
 //import com.hms.service.LabTestService;
@@ -10,7 +10,7 @@
 //
 //@RestController
 //@RequestMapping
-//public class LabTestController {
+public class LabTestController {
 //    @Autowired
 //    private LabTestService labTestService;
 //
@@ -57,4 +57,4 @@
 ////        return labTestService.saveRTest(radiologicalTest);
 ////    }
 //
-//}
+}
