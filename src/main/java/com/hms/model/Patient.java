@@ -5,7 +5,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.validation.constraints.AssertTrue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,30 +17,40 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class User {
+public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int mid;
-//    @Getter
-//    @Setter
+    @Getter
+    private String fullName;
+    @Getter
     private String username;
+    @Getter
     //@Setter
     private String password;
-    //@Getter
-    private String fullName;
-    //@Getter
+    @Getter
     private String phone;
-    //@Getter
+    @Getter
     private int age;
-    //@Getter
+    @Getter
     private String sex;
+    @Getter
     private String address;
-    private String userType;
+    @Getter
+    private String patientType;
 
 
  // Getter & Setter has been Uses Explicitly.
- // Because of UserServiceImpl was unable to get and set
+ // Because of PatientServiceImpl was unable to get and set
 
+
+    public int getMid() {
+        return mid;
+    }
+
+    public void setMid(int mid) {
+        this.mid = mid;
+    }
 
     public String getUsername() {
         return username;
@@ -99,26 +108,27 @@ public class User {
         this.address = address;
     }
 
-    public String getUserType() {
-        return userType;
+    public String getPatientType() {
+        return patientType;
     }
 
-    public void setUserType(String userType) {
-        this.userType = userType;
+    public void setPatientType(String patientType) {
+        this.patientType = patientType;
     }
-
-    public User(String phone) {
-        this.phone = phone;
-    }
-
 
 
     @Override
     public String toString() {
-        return "User{" +
-                "phone='" + phone + '\'' +
+        return "Patient{" +
+                "mid=" + mid +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
                 ", fullName='" + fullName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", age=" + age +
+                ", sex='" + sex + '\'' +
+                ", address='" + address + '\'' +
+                ", patientType='" + patientType + '\'' +
                 '}';
     }
-
 }
