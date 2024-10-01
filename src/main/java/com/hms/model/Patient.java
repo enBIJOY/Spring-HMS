@@ -37,9 +37,14 @@ public class Patient {
     private String patientType;
 
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn (name = "fk_Patient_Disease")
-    private PatientDisease patientDisease;
+//    @OneToOne(cascade = CascadeType.ALL)
+//    @JoinColumn (name = "fk_Patient_Disease")
+//    private PatientDisease patientDisease;
+
+//    @OneToOne(cascade = CascadeType.PERSIST)
+//    @JoinColumn(name = "fk_Patient_Disease")
+//    private PatientDisease patientDisease;
+
 
 
  // Getter & Setter has been Uses Explicitly.
@@ -117,6 +122,14 @@ public class Patient {
     public void setPatientType(String patientType) {
         this.patientType = patientType;
     }
+
+//    public PatientDisease getPatientDisease() {
+//        return patientDisease;
+//    }
+//
+//    public void setPatientDisease(PatientDisease patientDisease) {
+//        this.patientDisease = patientDisease;
+//    }
 
 
     @Override

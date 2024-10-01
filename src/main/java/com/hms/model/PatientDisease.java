@@ -1,6 +1,5 @@
 package com.hms.model;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,3 +17,4 @@ public class PatientDisease {
     private String diseaseName;
     private  String diseaseType;
 }
+

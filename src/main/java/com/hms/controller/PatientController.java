@@ -2,7 +2,9 @@ package com.hms.controller;
 
 import com.hms.model.Patient;
 import com.hms.service.PatientService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +18,14 @@ public class PatientController {
     public List<Patient> getAllPatient() {
         return patientService.getAllPatient();
     }
+
+
+//    @PostMapping ("/patient")
+//    public ResponseEntity<String>savePatient(@RequestBody Patient patient){
+//        patientService.savePatient(patient);
+//        return ResponseEntity.ok("Data Saved");
+//    }
+
 
     @PostMapping ("/patient")
     public Patient createUser(@RequestBody Patient patient) {
