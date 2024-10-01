@@ -1,10 +1,7 @@
 package com.hms.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,6 +35,11 @@ public class Patient {
     private String address;
     @Getter
     private String patientType;
+
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn (name = "fk_Patient_Disease")
+    private PatientDisease patientDisease;
 
 
  // Getter & Setter has been Uses Explicitly.
