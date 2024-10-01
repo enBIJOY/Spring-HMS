@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class PatientDisease {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id; //
     @Column(name = "Disease")
     private String diseaseName;
     private  String diseaseType;
