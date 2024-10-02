@@ -10,9 +10,9 @@ public interface PatientService {
     List<Patient> getAllPatient();
 
 
-    public Patient fetchPatientById(int userId);
+    public Patient fetchPatientById(int patientId);
 
-    public void deletePatientById(int userId);
+    //public void deletePatientById(int userId);
 
-    public Patient updatePatient(int userId, Patient patient);
+    //public Patient updatePatient(int userId, Patient patient);
 }
