@@ -19,6 +19,6 @@ public class PatientDischarge {
     @Column(name = "Discharge")
     private String patientName;
     private  String bedNo;
-    private int contactNumber;
-    private int date;
+    private String contactNumber;
+    private String date;
 }

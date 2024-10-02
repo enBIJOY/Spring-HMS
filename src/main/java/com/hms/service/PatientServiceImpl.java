@@ -24,48 +24,51 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public Patient fetchPatientById(int userId) {
-        return patientRepo.findById(userId).get();
+    public Patient fetchPatientById(int patientId) {
+        return patientRepo.findById(patientId).get();
     }
 
-    @Override
-    public void deletePatientById(int userId) {
-        patientRepo.deleteById(userId);
-    }
 
-    @Override
-    public Patient updatePatient(int userId, Patient patient) {
-        Patient patientDB = patientRepo.findById(userId).get();
-
-//        if (Objects.nonNull(patient.getUsername()) &&
-//                !"".equalsIgnoreCase(patient.getUsername())) {
-//            patientDB.setUsername(patient.getUsername());
+//    No Need As My Module
+//
+//    @Override
+//    public void deletePatientById(int userId) {
+//        patientRepo.deleteById(userId);
+//    }
+//
+//    @Override
+//    public Patient updatePatient(int userId, Patient patient) {
+//        Patient patientDB = patientRepo.findById(userId).get();
+//
+////        if (Objects.nonNull(patient.getUsername()) &&
+////                !"".equalsIgnoreCase(patient.getUsername())) {
+////            patientDB.setUsername(patient.getUsername());
+////        }
+//
+//        if (Objects.nonNull(patient.getPassword()) &&
+//                !"".equalsIgnoreCase(patient.getPassword())) {
+//            patientDB.setPassword(patient.getPassword());
 //        }
-
-        if (Objects.nonNull(patient.getPassword()) &&
-                !"".equalsIgnoreCase(patient.getPassword())) {
-            patientDB.setPassword(patient.getPassword());
-        }
-//        if (Objects.nonNull(patient.getFullName()) &&
-//                !"".equalsIgnoreCase(patient.getFullName())) {
-//            patientDB.setFullName(patient.getFullName());
+////        if (Objects.nonNull(patient.getFullName()) &&
+////                !"".equalsIgnoreCase(patient.getFullName())) {
+////            patientDB.setFullName(patient.getFullName());
+////        }
+//        if (Objects.nonNull(patient.getPhone()) &&
+//                !"".equalsIgnoreCase(patient.getPhone())) {
+//            patientDB.setPhone(patient.getPhone());
 //        }
-        if (Objects.nonNull(patient.getPhone()) &&
-                !"".equalsIgnoreCase(patient.getPhone())) {
-            patientDB.setPhone(patient.getPhone());
-        }
-        if (Objects.nonNull(patient.getAge()) &&
-                patient.getAge() > 0) {
-            patientDB.setAge(patient.getAge());
-        }
-        if (Objects.nonNull(patient.getAddress()) &&
-                !"".equalsIgnoreCase(patient.getAddress())) {
-            patientDB.setAddress(patient.getAddress());
-        }
-//        if (Objects.nonNull(patient.getUserType()) &&
-//                !"".equalsIgnoreCase(patient.getUserType())) {
-//            patientDB.setUserType(patient.getUserType());
+//        if (Objects.nonNull(patient.getAge()) &&
+//                patient.getAge() > 0) {
+//            patientDB.setAge(patient.getAge());
 //        }
-        return patientRepo.save(patientDB);
-    }
+//        if (Objects.nonNull(patient.getAddress()) &&
+//                !"".equalsIgnoreCase(patient.getAddress())) {
+//            patientDB.setAddress(patient.getAddress());
+//        }
+////        if (Objects.nonNull(patient.getUserType()) &&
+////                !"".equalsIgnoreCase(patient.getUserType())) {
+////            patientDB.setUserType(patient.getUserType());
+////        }
+//        return patientRepo.save(patientDB);
+//    }
 }

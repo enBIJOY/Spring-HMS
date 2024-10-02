@@ -33,17 +33,17 @@ public class PatientController {
     }
 
         @GetMapping("/patient/{id}")
-        public Patient fetchUserById(@PathVariable("id") int userId){
-            return patientService.fetchPatientById(userId);
+        public Patient fetchUserById(@PathVariable("id") int patientId){
+            return patientService.fetchPatientById(patientId);
     }
 
-    @DeleteMapping("/patient/{id}")
-    public String deleteUserById(@PathVariable("id") int UserId){
-        patientService.deletePatientById(UserId);
-        return "Patient Deleted Successfully!!";
-    }
-    @PutMapping("/patient/{id}")
-    public Patient updateUser(@PathVariable ("id") int UserId, @RequestBody Patient patient){
-        return patientService.updatePatient(UserId, patient);
-    }
+//    @DeleteMapping("/patient/{id}")
+//    public String deleteUserById(@PathVariable("id") int UserId){
+//        patientService.deletePatientById(UserId);
+//        return "Patient Deleted Successfully!!";
+//    }
+//    @PutMapping("/patient/{id}")
+//    public Patient updateUser(@PathVariable ("id") int UserId, @RequestBody Patient patient){
+//        return patientService.updatePatient(UserId, patient);
+//    }
 }
