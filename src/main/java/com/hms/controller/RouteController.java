@@ -8,7 +8,7 @@ public class RouteController {
 
     @GetMapping(value="/")
     public String rootMap(){
-        return "Hello Spring! auto load after change";
+        return "https://documenter.getpostman.com/view/38819167/2sAXxMgZJf";
     }
 
     @RequestMapping(value="/test", method= RequestMethod.GET)
